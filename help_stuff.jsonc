@@ -1,0 +1,61 @@
+{
+	"articles": [
+		{
+			"title": "Article Template",
+			"description": "The template for Help Articles.",
+			"content": [
+				"This is the template for this website's Help Articles. It contains the template for help article metadata."
+			]
+		},
+		{
+			"title": "Website Theme",
+			"description": "A description and tutorial for and about changing the website theme.",
+			"content": [
+				"The theme of the website can be toggled between light and dark by clicking the button on the right-hand side of the navigation bar that says \"Theme: {current_theme}\".",
+				"There are only the light and dark themes for this website and you CANNOT create custom ones.",
+				"Furthermore, due to this site not using cookies, changing the theme will not be permanent and will reset when you visit another page."
+			]
+		}
+	],
+
+	"faq": [
+		{
+			"question": "Question Template",
+			"answer": "This is the template for the site's Frequently Asked Questions."
+		}
+	],
+
+	"issues": [
+		{
+			"issue": "Issue Template",
+			"content": [
+				"This is the template for the website's issues.",
+				"There is nothing else here."
+			],
+			"type": [
+				"bug",
+				"discussion",
+				"documentation",
+				"enhancement",
+				"feature request",
+				"question"
+			],
+			/* IF ISSUE IS NONE OF ABOVE: REMOVE, OR CONFIRM NEW STATUS */
+
+			"status": [
+				"can't reproduce",
+				"confirmed",
+				"duplicate",
+				"needs information",
+				"won't do/fix"
+			],
+			/* IF ISSUE IS NONE OF ABOVE: REMOVE, OR CONFIRM NEW STATUS */
+
+			"priority": ["critical", "high", "low"],
+			/* CAN LEAVE BLANK */
+
+			"notes": ["help wanted", "good first issue"]
+			/* CAN LEAVE BLANK */
+		}
+	]
+}

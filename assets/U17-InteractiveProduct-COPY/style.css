@@ -1,0 +1,586 @@
+/* CSS Document */
+:root {
+	--glw-col-0: #00bc9a;
+	--glw-col-1: #04cedd;
+}
+
+* {
+	font-family: 'Segoe UI', Segoe, Calibri, Arial, Helvetica, sans-serif;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.darkmode {
+	color: white;
+	background-color: black;
+}
+
+#theme-button {
+	font-weight: 500;
+	font-family: 'Segoe UI', Segoe, 'sans-serif';
+	font-size: 8pt;
+	text-align: center;
+	color: black;
+	background-color: #f0f0f0;
+	border-color: transparent;
+	border-width: 0;
+	border-radius: 3px;
+	position: absolute;
+	right: 1%;
+	top: calc(50% - 15px);
+	width: max-content;
+	height: 30px;
+	transition: all 0.5s;
+}
+
+#theme-button:hover {
+	background-color: #d0d0d0;
+	border: #d0d0d0 1px solid;
+	font-size: 9pt;
+}
+
+.darkmode #theme-button {
+	color: #fff;
+	background-color: #222;
+}
+
+.darkmode #theme-button:hover {
+	background-color: #333;
+	border: #333;
+}
+
+section {
+	display: grid;
+	place-items: center;
+	align-content: center;
+}
+
+.hidden {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(-100%);
+	transition: all 2s;
+}
+
+.show {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
+}
+
+h1 {
+	font-weight: 650;
+	text-align: center;
+}
+
+p {
+	font-size: 12pt;
+}
+
+a {
+	color: #147AC8;
+	text-decoration: underline solid;
+}
+
+label {
+	font-weight: 600;
+}
+
+address {
+	font-size: 8pt;
+}
+
+abbr {
+	text-decoration: none;
+	text-decoration-color: rgba(199, 199, 199, 0.4);
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	user-select: none;
+}
+
+.darkmode abbr {
+	text-decoration-color: rgba(89, 89, 89, 0.4);
+}
+
+.invis {
+	color: transparent;
+	background-color: transparent;
+	border-color: transparent;
+	outline-color: transparent;
+	text-decoration-color: transparent;
+	caret-color: transparent;
+	flood-color: transparent;
+	lighting-color: transparent;
+	text-emphasis-color: transparent;
+}
+
+.container {
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+}
+
+.header {
+	font-size: 32pt;
+	font-weight: bold;
+	font-family: 'Segoe UI', Segoe, 'sans-serif';
+	color: white;
+	background-color: black;
+	border: black, 2px, solid;
+	text-align: center;
+	text-indent: 15px;
+	width: 100%;
+	height: max-content;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.header header::selection {
+	background-color: transparent;
+}
+
+.nav {
+	text-align: center;
+	font-size: 24pt;
+	color: black;
+	background-color: skyblue;
+	border: 2px solid skyblue;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	padding: 0;
+}
+
+.nav a {
+	text-decoration: none;
+	position: absolute;
+	width: 14%;
+	height: 48px;
+	font-size: 24pt;
+	color: black;
+	border: transparent 0.5px;
+	background-color: skyblue;
+	transition: all 0.5s;
+}
+
+.nav a[current] {
+	font-weight: 650;
+}
+
+.nav a[index="0"] {
+	left: 0%;
+}
+
+.nav a[index="1"] {
+	left: 14%;
+}
+
+.nav a[index="2"] {
+	left: 28%;
+}
+
+.nav a[index="3"] {
+	left: 42%;
+}
+
+.nav a[index="4"] {
+	left: 56%;
+}
+
+.nav a[index="5"] {
+	left: 70%;
+}
+
+.nav a:hover {
+	background-color: cornflowerblue;
+	border: cornflowerblue 1px solid;
+}
+
+.nav a::selection {
+	background-color: transparent;
+}
+
+.main-content {
+	width: 60%;
+	margin-left: 20%;
+}
+
+.footer {
+	font-family: 'Segoe UI', Segoe, 'sans-serif';
+	color: lightgrey;
+	background-color: #222222;
+	border: thick, solid, #222222;
+	margin: 0;
+	padding: 10px;
+	left: 0px;
+	right: 0px;
+	top: 100%;
+}
+
+.footer p {
+	font-size: 10pt;
+	line-height: 1;
+}
+
+.footer a {
+	color: #147AC8;
+}
+
+ul.contact-methods {
+	list-style-type: none;
+}
+
+
+/* glow { */
+.glow {
+	font-size: 40pt;
+	color: #fff;
+	background-color: #000;
+	text-align: center;
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+	-moz-animation: glow 1s ease-in-out infinite;
+	animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 
+					 0 0 30px var(--glw-col-0), 0 0 40px var(--glw-col-0), 
+					 0 0 50px var(--glw-col-0), 0 0 60px var(--glw-col-0), 
+					 0 0 70px var(--glw-col-0);
+	}
+	to {
+		text-shadow: 0 0 20px #fff, 0 0 30px #fff, 
+					 0 0 40px var(--glw-col-1), 0 0 50px var(--glw-col-1), 
+					 0 0 60px var(--glw-col-1), 0 0 70px var(--glw-col-1), 
+					 0 0 80px var(--glw-col-1);
+	}
+}
+
+@-webkit-keyframes glow {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 
+					 0 0 30px var(--glw-col-0), 0 0 40px var(--glw-col-0), 
+					 0 0 50px var(--glw-col-0), 0 0 60px var(--glw-col-0), 
+					 0 0 70px var(--glw-col-0);
+	}
+	to {
+		text-shadow: 0 0 20px #fff, 0 0 30px #fff, 
+					 0 0 40px var(--glw-col-1), 0 0 50px var(--glw-col-1), 
+					 0 0 60px var(--glw-col-1), 0 0 70px var(--glw-col-1), 
+					 0 0 80px var(--glw-col-1);
+	}
+}
+/* } glow */
+
+
+a.button {
+	text-decoration: none;
+	color: #C7C7C7;
+	background-color: #147AC8;
+}
+
+a.button:hover {
+	color: #171717;
+	background-color: #46A1E7;
+}
+
+a.signup, #signup {
+	padding: 5px;
+	font-weight: normal;
+	text-decoration: none;
+	color: black;
+	background-color: cornflowerblue;
+	border: 1px solid cornflowerblue;
+	border-radius: 5px;
+}
+
+a.signup:hover, #signup:hover {
+	background-color: lightskyblue;
+	border-color: lightskyblue;
+}
+
+#help-search, #search-btn {
+	border: 2px solid #000;
+}
+
+.darkmode #help-search, .darkmode #search-btn {
+	color: #fff;
+	background-color: #333;
+	border-color: #ddd;
+}
+
+#search-btn:hover {
+	background-color: #787878;
+}
+
+#emailIn {
+	border: 5px solid white;
+	border-radius: 5px;
+}
+
+.darkmode #emailIn {
+	background-color: #000;
+	border-color: #000;
+}
+
+.signup-form {
+	text-align: center;
+	width: 80%;
+	margin-left: calc(10% - 15px);
+	background-color: #ddd;
+	border-radius: 3px;
+	border: 15px solid #ddd;
+}
+
+.darkmode .signup-form {
+	background-color: #282828;
+	border-color: #282828;
+}
+
+
+.info-tip {
+	/* content: "\e88e"; */
+	font-size: 10pt;
+	height: 24px;
+	width: 24px;
+	user-select: none;
+}
+
+/* .info-tip:hover {
+	background-color: #fff;
+} */
+
+
+/* Booking Form Styles {{ */
+#booking-form {
+	text-align: center;
+	width: 80%;
+	margin-left: 10%;
+	background-color: #e8e8e8;
+	border-radius: 3px;
+}
+
+.darkmode #booking-form {
+	color: #fff;
+	background-color: #303030;
+}
+
+#booking-form input {
+	border: 3px solid #fff;
+	height: 20px;
+	border-radius: 3px;
+}
+
+.darkmode #booking-form input {
+	color: #fff;
+	background-color: #1b1b1b;
+	border-color: #1b1b1b;
+}
+
+/* #booking-form input[type="submit"] {
+
+} */
+/* }} Booking Form Styles */
+
+
+/* Contact Form Styles  {{ */
+.contact-form {
+	text-align: center;
+	width: 80%;
+	margin-left: calc(10% - 15px);
+}
+
+#contact-form {
+	text-align: left;
+	background-color: #ddd;
+	border-radius: 3px;
+	border: 15px solid #ddd;
+}
+
+.darkmode #contact-form {
+	color: #fff;
+	background-color: #444;
+	border-color: #444;
+}
+
+#sender-name, #sender-email {
+	width: 250px;
+	border: 5px solid white;
+	border-radius: 5px;
+}
+
+#sendername-label, #senderemail-label {
+	margin-left: calc(2% - 5px);
+}
+
+#contact-container {
+	position: relative;
+	width: 100%;
+}
+
+#message {
+	border: 5px solid white;
+	border-radius: 5px;
+	resize: none;
+	width: 75%;
+	margin-left: calc(2% - 5px);
+}
+
+.darkmode #sender-name, .darkmode #message {
+	background-color: #333;
+	border-color: #333;
+}
+
+#sender-name:focus, #message:focus {
+	outline-color: transparent;
+	/* box-shadow: transparent; */
+}
+
+#message-label {
+	margin-left: calc(2% - 5px);
+}
+
+#send-button {
+	font-weight: 700;
+	background-color: #57c2b4;
+	border: #000 2px solid;
+	position: absolute;
+	top: 40px;
+	left: calc(
+		15px + (2% - 5px) + 75% + 7% /* - width / 2 */
+	);
+	width: 80px;
+	height: 35px;
+}
+
+#send-button:hover {
+	background-color: #81d1c6;
+}
+
+.discard {
+	font-weight: 700;
+	background-color: #ff826c;
+	border: 2px solid #000;
+	position: absolute;
+	bottom: 40px;
+	left: calc(
+		15px + (2% - 5px) + 75% + 7% /* - width / 2 */
+	);
+	width: 80px;
+	height: 35px;
+}
+
+.discard:hover {
+	background-color: #ff9c8b;
+}
+/* }}  Contact Form Styles */
+
+
+.row {
+	display: flex;
+}
+
+.column {
+	flex: 50%;
+	padding: 5px;
+}
+
+.footer .column {
+	flex: 30%;
+	padding: 5px;
+	text-indent: 15px;
+	border-left: #282828 1px solid;
+	border-right: #282828 1px solid;
+}
+
+.inherit {
+	font-family: inherit;
+	color: inherit;
+	background-color: inherit;
+}
+
+
+/* events { */
+.eventrow {
+	display: flex;
+	font-weight: 500;
+	background-color: #E8E8E8;
+	border-radius: 8px;
+	line-height: 3;
+}
+
+.eventrow:hover {
+	background-color: #EEE;
+}
+
+.darkmode .eventrow {
+	background-color: #303030;
+	color: #fff;
+}
+
+.darkmode .eventrow:hover {
+	background-color: #222;
+}
+
+.eventcolumn {
+	flex: 25%;
+	padding: 5px;
+}
+
+.eventlocation {
+	font-weight: bold;
+	padding-left: 5%;
+}
+
+.book-button {
+	font-size: 18pt;
+	font-weight: 700;
+	text-decoration: none;
+	color: black;
+	background-color: #00fff2;
+	padding: 0 15pt;
+	position: relative;
+	top: 5%;
+	bottom: 5%;
+	left: 5%;
+	border-radius: 5px;
+	border: 0 none transparent;
+}
+
+.book-button:hover {
+	background-color: #8cfff9;
+}
+/* } events */
+
+
+/* ----- custom tags ----- */
+important {
+	color: red;
+	font-weight: 700;
+}
+
+space {
+	user-select: none;
+	white-space: pre;
+}
+space::after {
+	content: "  ";
+	white-space: pre;
+}
+
+/* Google */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}

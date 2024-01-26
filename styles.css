@@ -1,0 +1,642 @@
+:root {
+	/* -- "font-family" (FF) Variables -- */
+	--FF-default: "Segoe UI", "Calibri", "Arial", "Helvetica", sans-serif;
+	--FF-monospace: "Fira Code", "JetBrains Mono", "Roboto", "Consolas",
+		"Courier New", Courier, monospace;
+
+	/* -- Colour Variables -- */
+
+	/* ---- "color" (Cl) Variables ---- */
+	--Cl-default: #000000;
+	/* ---- "background-color" (BC) Variables ---- */
+	--BC-default: #cacaca;
+
+	/* -- Size (S) Variables -- */
+	/* ---- Dimension (D) Variables ---- */
+	--S-D-body-width: 100%;
+	--S-D-body-height: 100%;
+}
+
+.darkmode:root {
+	/*  "color" (Cl) Variables  */
+	--Cl-default: #eeeeee;
+	/*  "background-color" (BC) Variables  */
+	--BC-default: #111111;
+}
+
+* {
+	font-family: var(--FF-default);
+}
+
+body {
+	color: var(--Cl-default);
+	/* background-color: var(--BC-default); */
+	background-image: linear-gradient(to right, transparent, #eee, transparent);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+body.darkmode {
+	color: #eee;
+	/* background-color: #111; */
+	/* background-color: #010101; */
+	background-image: linear-gradient(to right, #010101, #222, #010101);
+	border-color: #eee;
+}
+
+.darkmode a {
+	color: #4242ff;
+}
+
+/* vvv SCROLL ANIMATION vvv */
+section {
+	display: grid;
+	place-items: center;
+	align-content: center;
+}
+
+section p {
+	text-align: justify;
+}
+
+.hidden {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(-100%);
+	transition: all 1s;
+}
+
+.show {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
+}
+/* ^^^ SCROLL ANIMATION ^^^ */
+
+/* Help Stuff [[ */
+.help-article {
+	background-color: #efefef;
+	border-radius: 1px;
+	width: 65%;
+	padding: 5px 25px;
+}
+
+.darkmode .help-article {
+	background-color: #111111;
+}
+
+.issue {
+	background-color: #efefef;
+	border-radius: 1px;
+	width: 85%;
+	padding: 5px 25px;
+}
+
+.darkmode .issue {
+	background-color: #111111;
+}
+
+.faq {
+	background-color: #efefef;
+	border-radius: 1px;
+	width: 75%;
+	padding: 5px 25px;
+}
+
+.darkmode .faq {
+	background-color: #111111;
+}
+/* ]] Help Stuff */
+
+/* The sticky class is (supposedly) added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+/* END STICKY */
+
+.container {
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+}
+
+.header {
+	color: #eee;
+	background-color: #111;
+	text-indent: 5%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: 100px;
+	vertical-align: middle;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.header img {
+	display: inline;
+	border: 0 none transparent;
+	width: 75px;
+	filter: invert();
+}
+
+.nav {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	background-color: #333;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.nav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 9px 2px;
+	text-decoration: none;
+	width: 18%;
+	height: max-content;
+	text-align: center;
+	margin-left: 3px;
+}
+
+.nav a:hover {
+	color: black;
+	background-color: #0aa;
+}
+
+.nav button {
+	float: right;
+	display: block;
+	color: #f2f2f2;
+	background-color: transparent;
+	border-color: transparent;
+	padding: 2px 2px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	margin-right: 4px;
+}
+
+.nav button:hover {
+	color: black;
+	background-color: #0aa;
+}
+
+.main {
+	text-align: center;
+	width: 60%;
+	padding: 1%;
+	margin-left: 19%;
+	background-color: #fff;
+}
+
+.darkmode .main {
+	background-color: #010101;
+}
+
+.main .page-contents ul {
+	list-style-type: none;
+	list-style-position: outside;
+	padding: 0;
+}
+
+.main .page-contents a {
+	color: #000;
+}
+
+.darkmode .main .page-contents a {
+	color: #fff;
+}
+
+.main form {
+	background-color: #ddd;
+	border-radius: 4px;
+	border: 5px solid #ddd;
+	padding: 10px;
+}
+
+.darkmode .main form {
+	background-color: #333;
+	border-color: #333;
+}
+
+.main form input[type="text"],
+.main form textarea {
+	border: 4px solid #fff;
+	border-radius: 3px;
+	resize: none;
+	width: calc(100% - 4px * 2 - 5px);
+}
+
+.darkmode .main form input[type="text"],
+.darkmode .main form textarea {
+	background-color: #444;
+	border-color: #444;
+}
+
+.main form input[type="submit"] {
+	align-self: center;
+	background-color: #509a20;
+	border: 3px solid #509a20;
+	border-radius: 2px;
+	width: 40%;
+	height: 50px;
+}
+
+.main form input[type="submit"]:hover {
+	background-color: #73bc00;
+	border: 4px solid #73bc00;
+}
+
+.main form #discard {
+	align-self: center;
+	background-color: #ea4047;
+	border: 3px solid #ea4047;
+	border-radius: 2px;
+	width: 40%;
+	height: 50px;
+}
+
+.main form #discard:hover {
+	background-color: #ff6050;
+	border: 4px solid #ff6050;
+}
+
+.main .fulbar {
+	color: #111;
+	background-color: #111;
+	text-align: center;
+	width: 100%;
+}
+
+.darkmode .main .fulbar {
+	color: #eee;
+	background-color: #eee;
+}
+
+.footer {
+	color: white;
+	background-color: #333;
+	/* position: absolute; */
+	bottom: 0;
+	text-indent: 3%;
+	padding: 1px;
+	width: 100%;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.footer a {
+	color: #0aa;
+}
+
+br {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+ul.achv-pg-lnks {
+	list-style-type: none;
+	list-style-position: outside;
+	padding: 0;
+}
+
+ul.skills-list {
+	text-align: left;
+}
+
+ul.skills-list h3 {
+	text-align: center;
+	padding: 0;
+}
+
+ul.site-links {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul.site-links a {
+	color: #000;
+}
+
+.darkmode ul.site-links a {
+	color: #fff;
+}
+
+/* p::before {
+	content: "\00a0";
+} */
+
+img,
+video,
+iframe {
+	border: 2pt solid #888;
+	width: 70%;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Table */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+	background-color: #eee;
+}
+
+.darkmode tr:nth-child(even) {
+	background-color: #111;
+}
+
+tr.gcse-result td#gcse {
+	padding: 15px;
+}
+
+tr.gcse-result td#result {
+	text-align: right;
+	padding: 15px;
+}
+
+th {
+	background-color: #999;
+}
+
+.darkmode th {
+	background-color: #666;
+}
+
+th,
+td {
+	border: 1px solid;
+	width: max-content;
+	margin: 0;
+}
+/* / Table */
+
+hr {
+	background-image: linear-gradient(to right, transparent, #000, transparent);
+}
+
+.darkmode hr {
+	background-image: linear-gradient(to right, transparent, #fff, transparent);
+}
+
+abbr {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+/* TAGS */
+div.tags {
+	user-select: none;
+}
+
+/*  <tag {letter_idx} /> is self-closing  */
+tag {
+	font-size: 8pt;
+	color: #5a5a5a;
+	background-color: #ababab;
+	border: 2px solid #5a5a5a;
+	border-radius: 3px;
+	flex-wrap: nowrap;
+	word-wrap: normal;
+	overflow-wrap: normal;
+}
+tag::before {
+	content: "\00a0";
+}
+tag::after {
+	content: "\00a0";
+}
+tag[color1][color2] {
+	color: attr(color1);
+	background-color: attr(color2);
+	border-color: attr(color1);
+}
+
+/*  | Type |  */
+span.type tag {
+	color: #1b0733;
+	background-color: #9500ff;
+	border-color: #1b0733;
+}
+span.type tag::before {
+	content: "\00a0Type: ";
+}
+span.type tag[A]::after {
+	content: "Bug\00a0";
+}
+span.type tag[B]::after {
+	content: "Discussion\00a0";
+}
+span.type tag[C]::after {
+	content: "Documentation\00a0";
+}
+span.type tag[D]::after {
+	content: "Enhancement\00a0";
+}
+span.type tag[E]::after {
+	content: "Feature Request\00a0";
+}
+span.type tag[F]::after {
+	content: "Question\00a0";
+}
+
+/*  | Status |  */
+span.status tag {
+	color: #223e05;
+	background-color: #86bb0c;
+	border-color: #223e05;
+}
+span.status tag::before {
+	content: "\00a0Status: ";
+}
+span.status tag[A]::after {
+	content: "Can't Reproduce\00a0";
+}
+span.status tag[B]::after {
+	content: "Confirmed\00a0";
+}
+span.status tag[C]::after {
+	content: "Duplicate\00a0";
+}
+span.status tag[D]::after {
+	content: "Needs Information\00a0";
+}
+span.status tag[E]::after {
+	content: "Won't Do/Fix\00a0";
+}
+
+/*  | Priority |  */
+span.priority tag {
+	color: #3f1105;
+	background-color: #bb3e0c;
+	border-color: #3f1105;
+}
+span.priority tag::before {
+	content: "\00a0Priority: ";
+}
+span.priority tag[A]::after {
+	content: "Critical\00a0";
+}
+span.priority tag[B]::after {
+	content: "High\00a0";
+}
+span.priority tag[C]::after {
+	content: "Low\00a0";
+}
+
+/*  | Notes |  */
+span.notes tag {
+	color: #0a4444;
+	background-color: #47a199;
+	border-color: #0a4444;
+}
+span.notes tag[A]::after {
+	content: "Help Wanted\00a0";
+}
+span.notes tag[B]::after {
+	content: "Good First Issue\00a0";
+}
+/* X TAGS */
+
+code {
+	color: #000;
+	font-family: var(--FF-monospace);
+}
+
+code * {
+	font-family: inherit;
+}
+
+/* keyword */
+code kw {
+	color: #8c00ff;
+}
+
+/* variable */
+code va {
+	color: #058bad;
+}
+
+/* constant */
+code con {
+	color: #0d5997;
+}
+.darkmode code con {
+	color: #1b6fb3;
+}
+
+/* function */
+code fn {
+	color: #ad8005;
+}
+
+/* Type */
+code T {
+	color: #03f;
+}
+code T {
+	color: #2b5dff;
+}
+
+/* operator */
+code op {
+	color: #578;
+}
+
+/* comment */
+code comm {
+	color: #858585;
+}
+
+code misc1 {
+	color: #0aa;
+}
+
+code misc2 {
+	color: #088;
+}
+
+pre.code {
+	font-family: var(--FF-monospace);
+	background-color: #ddd;
+	/* width: fit-content; */
+	padding: 5px;
+	border-radius: 2px;
+	border-width: 1pt;
+}
+
+.darkmode code {
+	color: #eee;
+}
+
+.darkmode pre.code {
+	background-color: #444;
+}
+
+.darkmode code kwd {
+	color: #3292ff;
+}
+
+.darkmode code oprt {
+	color: #689;
+	font-family: inherit;
+}
+
+note {
+	opacity: 50%;
+}
+
+trqse {
+	color: #00ff9d;
+	background-color: #000;
+	font-weight: 500;
+}
+
+cyan {
+	color: #0ff;
+	background-color: #000;
+	font-weight: 500;
+}
+
+.rainbow {
+	width: fit-content;
+	text-indent: 25px;
+	font-size: 24pt;
+	background-image: linear-gradient(
+		to right,
+		red,
+		yellow,
+		lime,
+		cyan,
+		blue,
+		magenta
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8" />
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="icon" type="image/png" href="assets/images/pfl-favicon.png" />
+		<link rel="icon" type="image/png" href="assets/images/pfl-favicon.ai" />
+
+		<!-- Inline Styles -->
+		<style>
+			.material-symbols-outlined {
+				font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+			}
+		</style>
+
+		<!-- Scripts -->
+		<script>
+			function pageLoadScripts() {
+				calcTime();
+			}
+		</script>
+		<script src="theme-script.js"></script>
+		<script>
+			function calcTime() {
+				let today = new Date();
+				let toYear = today.getUTCFullYear();
+				let toMonth = today.getMonth() + 1;
+				let toDay = today.getDate();
+
+				let toDayString = toDay.toString();
+				let toMonthString = toMonth.toString();
+
+				if (toDayString.length == 1) {
+					toDayString = "0" + toDayString;
+				}
+				if (toMonthString.length == 1) {
+					toMonthString = "0" + toMonthString;
+				}
+
+				let currentDate =
+					toDayString + "." + toMonthString + "." + toYear.toString();
+
+				let currentDateElement = document.getElementById("current-date");
+				currentDateElement.innerHTML = currentDate;
+			}
+		</script>
+
+		<script defer src="app.js"></script>
+
+		<title>My Portfolio - Home</title>
+	</head>
+
+	<!-- ---------------- -->
+
+	<body onload="pageLoadScripts();">
+		<!-- | Main Content | -->
+		<div class="container">
+			<div class="header">
+				<h1>My Digital Portfolio : Home</h1>
+			</div>
+
+			<!-- ---------------- -->
+
+			<div class="nav">
+				<a href="index.html">Home</a>
+				<!-- Sub-sections: future goals  [!!] -->
+				<a href="achievements.html">Achievements</a>
+				<a href="about.html">About Me</a>
+				<a href="help.html">Help</a>
+				<a href="contact.html">Contact</a>
+
+				<button onclick="toggleTheme();">
+					<span
+						class="material-symbols-outlined"
+						id="theme-icon"
+						title="Toggle Theme (Light/Dark)"
+					>
+						dark_mode
+					</span>
+				</button>
+			</div>
+
+			<!-- ---------------- -->
+
+			<div class="main">
+				<br />
+				<br />
+				<br />
+
+				<section class="hidden">
+					<h1>Portfolio Homepage</h1>
+				</section>
+
+				<br />
+				<br />
+
+				<section class="hidden">
+					<p><strong>Date Started:</strong> 26.04.2023</p>
+				</section>
+
+				<br />
+
+				<section class="hidden">
+					<p>
+						<strong>Date Finished:</strong>
+						18.06.2023
+					</p>
+				</section>
+
+				<br />
+
+				<section class="hidden">
+					<p>
+						<strong>Current Date:</strong>
+						<span id="current-date"></span>
+					</p>
+				</section>
+
+				<br />
+				<br />
+				<br />
+				<br />
+
+				<hr />
+
+				<br />
+				<br />
+				<br />
+				<br />
+
+				<section class="hidden">
+					<h2>Introduction</h2>
+				</section>
+
+				<br />
+				<br />
+
+				<section class="hidden">
+					<p>My name is Frank Hudson, and this is my web-portfolio.</p>
+				</section>
+
+				<br />
+
+				<section class="hidden">
+					<p>
+						I am making this site to show my skills and accomplishments for
+						future employers and/or educators. As well, to allow people to get
+						to know some things about me.
+					</p>
+				</section>
+
+				<br />
+
+				<section class="hidden">
+					<p>
+						Examples within the following sections are work done in Adobe
+						Photoshop and Illustrator, Microsoft Word and Access, as well as
+						code written in VisualStudio and Visual Studio Code.
+					</p>
+				</section>
+
+				<br />
+
+				<section class="hidden">
+					<p>
+						The site has been written in three languages (of the programming
+						variety). It is structured through
+						<abbr title="1. HyperText Markup Language">HTML</abbr>, styled with
+						<abbr title="2. Cascading Style Sheet">CSS</abbr> and includes a few
+						small <abbr title="3. JavaScript">JS</abbr> scripts for some added
+						functionality.
+					</p>
+				</section>
+
+				<br />
+				<br />
+				<br />
+
+				<section class="hidden">
+					<p>Thank You.</p>
+				</section>
+
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+			</div>
+
+			<!-- ---------------- -->
+
+			<div class="nav">
+				<!-- Nav 2 Start -->
+				<a href="index.html">Home</a>
+				<a href="achievements.html">Achievements</a>
+				<a href="about.html">About Me</a>
+				<a href="help.html">Help</a>
+				<a href="contact.html">Contact</a>
+
+				<button onclick="toggleTheme();">
+					<span
+						class="material-symbols-outlined"
+						id="theme-icon-foot"
+						title="Toggle Theme (Light/Dark)"
+					>
+						dark_mode
+					</span>
+				</button>
+				<!-- Nav 2 End -->
+			</div>
+
+			<!-- ---------------- -->
+
+			<div class="footer">
+				<h3>Footer Links</h3>
+
+				<p>
+					<b>Email:</b>
+					<a href="mailto:frank.hudson.v0@gmail.com">
+						frank.hudson.v0@gmail.com</a
+					>
+				</p>
+
+				<p><b>Phone:</b> +44 07111 111111</p>
+
+				<br />
+
+				<p><a href="funpage.html">Fun!</a></p>
+
+				<p>
+					Learn How to Make Websites with
+					<a href="https://www.w3schools.com">W3Schools (Nerdfun!)</a>
+					(W3 = WWW, as in www.website.com)
+				</p>
+
+				<p>
+					W3Schools also has courses on many popular programming languages, such
+					as Python, Java and
+					<abbr title="C, C++, C#">C<sup>*</sup></abbr>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

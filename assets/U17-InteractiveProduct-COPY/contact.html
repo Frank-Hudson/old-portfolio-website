@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="Description"
+			content="The Hives fake website 'Events' page"
+		/>
+		<meta name="author" content="Frank Hudson" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<base target="_blank" />
+
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="assets/images/U17 - A2 - site-icon.png" />
+
+		<script>
+			function emailValidate() {
+				const senderEmail = document.getElementById("sender-email");
+				const emailValidationMsg =
+					document.getElementById("isvalid-msg");
+
+				const focused = senderEmail.value;
+
+				if (!focused.includes("@")) {
+					emailValidationMsg.value =
+						"Please Enter a Valid Email Address";
+				}
+				if (
+					!focused.includes(".com" | ".co" | ".org" | ".gov" | ".edu")
+				) {
+					emailValidationMsg.value =
+						"Please Enter a Valid Email Address";
+				}
+			}
+		</script>
+
+		<title>Interactive Product - Events</title>
+	</head>
+
+	<!-- --body-- -->
+
+	<body onload="pageLoad()">
+		<script src="scripts/themeScript.js"></script>
+
+		<div class="container">
+			<div class="header">
+				<header style="position: sticky; top: 0">THE HIVES</header>
+			</div>
+
+			<!--nav-->
+
+			<div class="nav">
+				<a target="_self" index="0" href="index.html"
+					>&nbsp;Home&nbsp;</a
+				>
+				<a target="_self" index="1" href="events.html"
+					>&nbsp;Events&nbsp;</a
+				>
+				<a target="_self" index="2" href="news.html"
+					>&nbsp;News&nbsp;</a
+				>
+				<a target="_self" index="3" href="contact.html" current
+					>&nbsp;Contact&nbsp;</a
+				>
+				<a target="_self" index="4" href="about.html"
+					>&nbsp;About&nbsp;</a
+				>
+				<a target="_self" index="5" href="help.html"
+					>&nbsp;Help&nbsp;</a
+				>
+
+				<button id="theme-button" onclick="toggleTheme()">
+					<b>Theme:</b> <text id="theme-txt">Light</text>
+				</button>
+			</div>
+
+			<br />
+
+			<!--main content-->
+
+			<div class="main-content">
+				<h1>Contact</h1>
+
+				<p class="no-under">
+					<abbr title="Only one person">"We"</abbr> are
+					<abbr title="NOT">open</abbr> to any (accepted) form of
+					communication from viewers of our website and will gladly
+					take constructive feedback from anyone.
+				</p>
+
+				<p>We will also try to respond to as many people as we can.</p>
+
+				<p>
+					To contact
+					<abbr title="There is only actually one person">"us"</abbr>,
+					please use one of the following methods:
+				</p>
+
+				<ul class="contact-methods">
+					<li><a href="#h_contact-form">Contact Form</a></li>
+
+					<br />
+
+					<li>
+						<b>Email:</b>
+						<a href="mailto:11001010@company.org.com.co.uk"
+							>11001010@company.org.com.co.uk</a
+						>
+					</li>
+
+					<br />
+
+					<li><b>Phone:</b> -202 01737 434467 202</li>
+
+					<br />
+
+					<li>
+						<b>Mailing Address:</b>
+						<address>234 Real Business Place</address>
+						<address>Exists Corporation City</address>
+						<address>Capital Country Incorporated</address>
+						<address>Earth α:M-7.6</address>
+					</li>
+				</ul>
+
+				<br />
+
+				<p>
+					<important style="color: rgba(255, 0, 0, 0.5)">
+						Please Note: The above listed methods of contact are NOT
+						real! <br />
+						You cannot contact
+						<abbr title="Only one person">"us"</abbr> with them.
+						<br />
+						Please DO NOT try.
+					</important>
+				</p>
+
+				<p style="color: transparent">
+					If you have found this message, you may have also noticed I
+					was waffling on a bit in the NOTE. This was to push the
+					"Contact Form" header further down the page.
+				</p>
+
+				<br /><br /><br /><br />
+
+				<hr />
+
+				<br /><br /><br /><br />
+
+				<!-- Contact Form -->
+
+				<div class="contact-form">
+					<h2 id="h_contact-form">Contact Form</h2>
+
+					<p>This is the contact form for the website.</p>
+
+					<form id="contact-form" action="contact.php">
+						<br /><br /><br />
+
+						<label for="sender-name" id="sendername-label"
+							>Your Name: &nbsp;
+						</label>
+
+						<input
+							type="text"
+							id="sender-name"
+							name="sender-name"
+							placeholder="Type your name..."
+						/>
+
+						<br /><br />
+
+						<label
+							for="sender-email"
+							id="senderemail-label"
+							oninput="emailValidate();"
+							>Your Email: &nbsp;
+						</label>
+
+						<input
+							type="text"
+							id="sender-email"
+							name="senderEmail"
+							placeholder="Type your email..."
+						/>
+						<br />
+						<important
+							><output id="isvalid-msg" name="isValidMsg"></output
+						></important>
+
+						<br /><br />
+
+						<div id="contact-container">
+							<label for="message" id="message-label"
+								>Your Message:</label
+							>
+							<br />
+
+							<textarea
+								placeholder="Type your message..."
+								cols="80"
+								rows="8"
+								id="message"
+								name="message"
+							></textarea>
+							&emsp;
+
+							<input
+								type="submit"
+								id="send-button"
+								name="send"
+								value="Send"
+							/>
+
+							<input
+								type="button"
+								class="discard"
+								id="discard-button"
+								name="discard"
+								value="Discard"
+								onclick="
+									if (confirm('Are You Sure?')) {
+										document.getElementById('contact-form').reset();
+									}
+								"
+							/>
+						</div>
+
+						<br /><br /><br />
+					</form>
+				</div>
+			</div>
+
+			<br /><br /><br />
+
+			<!-- === Footer === -->
+
+			<div class="footer">
+				<div class="row">
+					<div class="column">
+						<b>Contact</b>
+
+						<p><b>Address</b></p>
+
+						<address>234 Real Business Place</address>
+						<address>Exists Corporation City</address>
+						<address>Capital Country Incorporated</address>
+						<address>Earth α:M-7.6</address>
+
+						<p>
+							<b>Email:</b> &ensp;
+							<a
+								class="inherit"
+								href="mailto:frank.hudson.v0@gmail.com"
+								>frank.hudson.v0@gmail.com</a
+							>
+						</p>
+
+						<p>
+							<b>Phone:</b> &ensp;
+							<a class="inherit">-202 01737 434467 202</a>
+						</p>
+
+						<p>
+							<b
+								><a
+									class="inherit"
+									style="
+										text-decoration-line: underline;
+										font-size: 11pt;
+										line-height: 10px;
+									"
+									href="contact.html"
+									>Contact</a
+								></b
+							>
+						</p>
+
+						<p><b></b> <a class="inherit"></a></p>
+					</div>
+
+					<div class="column">
+						<b>Help</b>
+
+						<p>
+							<a class="inherit"
+								><abbr
+									title="Not implemented: No User Feedback"
+									style="text-decoration: none"
+									>FAQ</abbr
+								></a
+							>
+						</p>
+
+						<p>
+							<a class="inherit"
+								><abbr
+									title="Not implemented: No User Feedback"
+									style="text-decoration: none"
+									>Issues</abbr
+								></a
+							>
+						</p>
+
+						<p>
+							<b
+								><a
+									class="inherit"
+									style="
+										text-decoration-line: underline;
+										font-size: 11pt;
+										line-height: 10px;
+									"
+									href="help.html"
+									>Help</a
+								></b
+							>
+						</p>
+
+						<br />
+
+						<b>References</b>
+
+						<p>
+							<b>Web Dev:</b>
+							<a class="inherit" href="https://www.w3schools.com/"
+								>W3Schools,<br
+							/></a>
+						</p>
+
+						<p>
+							<b>The Hives Description:</b>
+							<a
+								class="inherit"
+								href="https://en.wikipedia.org/wiki/The_Hives"
+								>The Hives - Wikipedia</a
+							>
+						</p>
+
+						<p>
+							<b>Generated 'Lorem ipsum' Filler Text:</b>
+							<a
+								class="inherit"
+								href="https://code.visualstudio.com/docs/editor/emmet"
+								>Emmet</a
+							>
+							in
+							<a
+								class="inherit"
+								href="https://code.visualstudio.com/"
+								>Visual Studio Code</a
+							>
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column" style="text-align: center">
+						<p><important>This site uses no cookies.</important></p>
+						<p>Copyright &copy; Nobody Never</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

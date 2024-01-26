@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="Description"
+            content="The Hives fake website 'Events' page"
+        />
+        <meta name="author" content="Frank Hudson" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <base target="_blank" />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="assets/images/U17 - A2 - site-icon.png" />
+        <title>Interactive Product - Events</title>
+    </head>
+
+    <!-- --body-- -->
+
+    <body onload="pageLoad()">
+        <script src="scripts/themeScript.js"></script>
+
+        <div class="container">
+            <div class="header">
+                <header style="position: sticky; top: 0">THE HIVES</header>
+            </div>
+
+            <!--nav-->
+
+            <div class="nav">
+                <a target="_self" index="0" href="index.html"
+                    >&nbsp;Home&nbsp;</a
+                >
+                <a target="_self" index="1" href="events.html"
+                    >&nbsp;Events&nbsp;</a
+                >
+                <a target="_self" index="2" href="news.html"
+                    >&nbsp;News&nbsp;</a
+                >
+                <a target="_self" index="3" href="contact.html"
+                    >&nbsp;Contact&nbsp;</a
+                >
+                <a target="_self" index="4" href="about.html"
+                    >&nbsp;About&nbsp;</a
+                >
+                <a target="_self" index="5" href="help.html" current
+                    >&nbsp;Help&nbsp;</a
+                >
+
+                <button id="theme-button" onclick="toggleTheme()">
+                    <b>Theme:</b> <text id="theme-txt">Light</text>
+                </button>
+            </div>
+
+            <br />
+
+            <!--main content-->
+
+            <div class="main-content">
+                <h1 style="text-align: left">Help</h1>
+
+                <div
+                    style="width: 80%; margin-left: 10%; text-align: center"
+                    id="help-search-form"
+				>
+					<script> /* Show Disclaimer Message */
+						function showDisclaimerMsg() {
+							disclaimerMessage = document.getElementById('disclaimer-msg');
+							disclaimerMessage.value = 'Searching not implemented';
+						}
+					</script>
+
+                    <input
+                        type="search"
+                        style="width: 85%; height: 50px; font-size: 14pt"
+                        id="help-search"
+						placeholder="Search help articles..."
+						oninput="showDisclaimerMsg()"
+                    />
+                    <input
+                        type="submit"
+                        style="width: 50px; height: 50px; font-size: 14pt"
+                        id="search-btn"
+                        value="🔍"
+                        alt="Search"
+                        title="Searching not implemented"
+						onclick="showDisclaimerMsg()"
+                    />
+
+                    <br />
+
+                    <important>
+                        <output id="disclaimer-msg" name="disclaimerMessage"></output>
+                    </important>
+                </div>
+
+                <br />
+                <br />
+
+                <p>
+                    The help page contains many articles for helping you to
+                    understand anything you do not understand.
+                    <span class="invis">
+                        None of the help articles on this page are real.
+                    </span>
+                </p>
+
+                <br />
+                <br />
+
+                <div class="sch-rslt">
+                    <h3><a href="">Heading</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Atque cupiditate vitae eaque! Nulla fugiat excepturi ex
+                        saepe hic ratione blanditiis, repellat, suscipit a
+                        similique culpa voluptate eaque consectetur, architecto
+                        laudantium!
+                    </p>
+                </div>
+
+                <br />
+
+                <div class="sch-rslt">
+                    <h3><a href="">Heading</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Inventore nemo, suscipit, assumenda praesentium
+                        modi necessitatibus impedit quisquam quasi obcaecati,
+                        iusto perspiciatis! Aut quos, vel perspiciatis rerum a
+                        similique. Corrupti, nostrum!
+                    </p>
+                </div>
+
+                <br />
+
+                <div class="sch-rslt">
+                    <h3><a href="">Heading</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Sunt deleniti laudantium, error quia similique
+                        possimus debitis eius incidunt! Totam odio fuga maxime
+                        quod officiis repudiandae asperiores facilis fugit optio
+                        dolor.
+                    </p>
+                </div>
+
+                <br />
+
+                <div class="sch-rslt">
+                    <h3><a href="">Heading</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veritatis suscipit necessitatibus nostrum quis nobis!
+                        Explicabo dignissimos, deleniti veritatis ipsum, at id
+                        mollitia consequuntur qui quas placeat eum facilis
+                        eligendi aliquam.
+                    </p>
+                </div>
+
+                <br />
+
+                <div class="sch-rslt">
+                    <h3><a href="">Heading</a></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Laborum fugit commodi ab modi consectetur non rerum
+                        nostrum maxime hic ipsa placeat eum, soluta eaque
+                        cupiditate sunt molestias, aspernatur deleniti quo!
+                    </p>
+                </div>
+            </div>
+
+            <br /><br /><br />
+
+            <!-- === Footer === -->
+
+            <div class="footer">
+                <div class="row">
+                    <div class="column">
+                        <b>Contact</b>
+
+                        <p><b>Address</b></p>
+
+                        <address>234 Real Business Place</address>
+                        <address>Exists Corporation City</address>
+                        <address>Capital Country Incorporated</address>
+                        <address>Earth α:M-7.6</address>
+
+						<p>
+							<b>Email:</b> &ensp;
+							<a
+								class="inherit"
+								href="mailto:frank.hudson.v0@gmail.com"
+								>frank.hudson.v0@gmail.com</a
+							>
+						</p>
+
+                        <p>
+                            <b>Phone:</b> &ensp;
+                            <a class="inherit">-202 01737 434467 202</a>
+                        </p>
+
+                        <p>
+                            <b
+                                ><a
+                                    class="inherit"
+                                    style="
+                                        text-decoration-line: underline;
+                                        font-size: 11pt;
+                                        line-height: 10px;
+                                    "
+                                    href="contact.html"
+                                    >Contact</a
+                                ></b
+                            >
+                        </p>
+
+                        <p><b></b> <a class="inherit"></a></p>
+                    </div>
+
+                    <div class="column">
+                        <b>Help</b>
+
+                        <p>
+                            <a class="inherit"
+                                ><abbr
+                                    title="Not implemented: No User Feedback"
+                                    style="text-decoration: none"
+                                    >FAQ</abbr
+                                ></a
+                            >
+                        </p>
+
+                        <p>
+                            <a class="inherit"
+                                ><abbr
+                                    title="Not implemented: No User Feedback"
+                                    style="text-decoration: none"
+                                    >Issues</abbr
+                                ></a
+                            >
+                        </p>
+
+                        <p>
+                            <b
+                                ><a
+                                    class="inherit"
+                                    style="
+                                        text-decoration-line: underline;
+                                        font-size: 11pt;
+                                        line-height: 10px;
+                                    "
+                                    href="help.html"
+                                    >Help</a
+                                ></b
+                            >
+                        </p>
+
+                        <br />
+
+                        <b>References</b>
+
+                        <p>
+                            <b>Web Dev:</b>
+                            <a class="inherit" href="https://www.w3schools.com/"
+                                >W3Schools,<br
+                            /></a>
+                        </p>
+
+                        <p>
+                            <b>The Hives Description:</b>
+                            <a
+                                class="inherit"
+                                href="https://en.wikipedia.org/wiki/The_Hives"
+                                >The Hives - Wikipedia</a
+                            >
+                        </p>
+
+                        <p>
+                            <b>Generated 'Lorem ipsum' Filler Text:</b>
+                            <a
+                                class="inherit"
+                                href="https://code.visualstudio.com/docs/editor/emmet"
+                                >Emmet</a
+                            >
+                            in
+                            <a
+                                class="inherit"
+                                href="https://code.visualstudio.com/"
+                                >Visual Studio Code</a
+                            >
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column" style="text-align: center">
+                        <p><important>This site uses no cookies.</important></p>
+                        <p>Copyright &copy; Nobody Never</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="Description"
+			content="The Hives fake website 'Events' page"
+		/>
+		<meta name="author" content="Frank Hudson" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<base target="_blank" />
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="assets/images/U17 - A2 - site-icon.png" />
+		<title>Interactive Product - Events</title>
+	</head>
+
+	<!-- --body-- -->
+
+	<body onload="pageLoad();">
+		<script src="scripts/themeScript.js"></script>
+
+		<div class="container">
+			<div class="header">
+				<header style="position: sticky; top: 0">THE HIVES</header>
+			</div>
+
+			<!--nav-->
+
+			<div class="nav">
+				<a target="_self" index="0" href="index.html"
+					>&nbsp;Home&nbsp;</a
+				>
+				<a target="_self" index="1" href="events.html" current
+					>&nbsp;Events&nbsp;</a
+				>
+				<a target="_self" index="2" href="news.html"
+					>&nbsp;News&nbsp;</a
+				>
+				<a target="_self" index="3" href="contact.html"
+					>&nbsp;Contact&nbsp;</a
+				>
+				<a target="_self" index="4" href="about.html"
+					>&nbsp;About&nbsp;</a
+				>
+				<a target="_self" index="5" href="help.html"
+					>&nbsp;Help&nbsp;</a
+				>
+
+				<button id="theme-button" onclick="toggleTheme()">
+					<b>Theme:</b> <text id="theme-txt">Light</text>
+				</button>
+			</div>
+
+			<br />
+
+			<!--main content-->
+
+			<div class="main-content">
+				<h1>Booking</h1>
+
+				<p>
+					This is the ticket booking page. It is here that you can use
+					your imaginary numerical currencies to acquire tiny slips of
+					paper that magically allow you entrance to loud sound
+					booming out of large boxes while you are surrounded by huge
+					crowds, all shouting and jumping about in front of a large
+					platform containing people who produce the loud sounds.
+				</p>
+
+				<p>The following are ticket prices:</p>
+
+				<ul>
+					<li>1 Ticket: £<span id="ticket-price">53.49</span></li>
+					<!-- <li>1000 Tickets: £<span id="ticket1000-price">1.99</span></li> -->
+				</ul>
+
+				<form id="booking-form" oninput="">
+					<br />
+
+					<h2>Book Tickets</h2>
+
+					<br />
+
+					<label for="ticket-name" id="tname-label">Name: </label>
+					&nbsp;
+					<input
+						type="text"
+						id="ticket-name"
+						name="ticket-name"
+						placeholder="Booking name..."
+					/>
+					<space>&emsp;</space>
+					<span
+						class="info-tip"
+						title="The name your ticket will be booked under."
+					>
+						(i)
+					</span>
+
+					<br />
+					<br />
+
+					<label for="ticket-qty">Tickets: </label>
+					&nbsp;
+					<input
+						type="number"
+						id="ticket-qty"
+						name="ticket-qty"
+						value="0"
+						onchange="
+			const price = parseFloat(document.getElementById('ticket-price').innerHTML);
+			const qty = parseFloat(document.forms['booking-form']['ticket-qty'].value);
+			totalcost.value = price * qty;"
+					/>
+					<space>&emsp;</space>
+					<span class="info-tip" title="How many tickets to book.">
+						(i)
+					</span>
+
+					<br />
+					<br />
+
+					<label for="total-cost" id="total-label"
+						>Total Cost:
+					</label>
+					£<output
+						id="total-cost"
+						name="totalcost"
+						for="ticket-price ticket-qty"
+						>0</output
+					>
+
+					<br />
+					<br />
+					<br />
+
+					<input
+						type="submit"
+						class="book-button"
+						style="
+							border: 0 none transparent;
+							height: max-content;
+							left: 0;
+						"
+						name="book-tickets"
+						id="book-tickets"
+						value="Book"
+					/>
+
+					<br />
+					<br />
+				</form>
+			</div>
+
+			<br /><br /><br />
+
+			<!-- === Footer === -->
+
+			<div class="footer">
+				<div class="row">
+					<div class="column">
+						<b>Contact</b>
+
+						<p><b>Address</b></p>
+
+						<address>234 Real Business Place</address>
+						<address>Exists Corporation City</address>
+						<address>Capital Country Incorporated</address>
+						<address>Earth α:M-7.6</address>
+
+						<p>
+							<b>Email:</b> &ensp;
+							<a
+								class="inherit"
+								href="mailto:frank.hudson.v0@gmail.com"
+								>frank.hudson.v0@gmail.com</a
+							>
+						</p>
+
+						<p>
+							<b>Phone:</b> &ensp;
+							<a class="inherit">-202 01737 434467 202</a>
+						</p>
+
+						<p>
+							<b
+								><a
+									class="inherit"
+									style="
+										text-decoration-line: underline;
+										font-size: 11pt;
+										line-height: 10px;
+									"
+									href="contact.html"
+									>Contact</a
+								></b
+							>
+						</p>
+
+						<p><b></b> <a class="inherit"></a></p>
+					</div>
+
+					<div class="column">
+						<b>Help</b>
+
+						<p>
+							<a class="inherit"
+								><abbr
+									title="Not implemented: No User Feedback"
+									style="text-decoration: none"
+									>FAQ</abbr
+								></a
+							>
+						</p>
+
+						<p>
+							<a class="inherit"
+								><abbr
+									title="Not implemented: No User Feedback"
+									style="text-decoration: none"
+									>Issues</abbr
+								></a
+							>
+						</p>
+
+						<p>
+							<b
+								><a
+									class="inherit"
+									style="
+										text-decoration-line: underline;
+										font-size: 11pt;
+										line-height: 10px;
+									"
+									href="help.html"
+									>Help</a
+								></b
+							>
+						</p>
+
+						<br />
+
+						<b>References</b>
+
+						<p>
+							<b>Web Dev:</b>
+							<a class="inherit" href="https://www.w3schools.com/"
+								>W3Schools,<br
+							/></a>
+						</p>
+
+						<p>
+							<b>The Hives Description:</b>
+							<a
+								class="inherit"
+								href="https://en.wikipedia.org/wiki/The_Hives"
+								>The Hives - Wikipedia</a
+							>
+						</p>
+
+						<p>
+							<b>Generated 'Lorem ipsum' Filler Text:</b>
+							<a
+								class="inherit"
+								href="https://code.visualstudio.com/docs/editor/emmet"
+								>Emmet</a
+							>
+							in
+							<a
+								class="inherit"
+								href="https://code.visualstudio.com/"
+								>Visual Studio Code</a
+							>
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column" style="text-align: center">
+						<p><important>This site uses no cookies.</important></p>
+						<p>Copyright &copy; Nobody Never</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
