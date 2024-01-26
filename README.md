@@ -1,6 +1,6 @@
 # README
 
-Hi, this is my portfolio website.
+Hi! I am Frank and this is my portfolio website.
 
 ## Outline
 
